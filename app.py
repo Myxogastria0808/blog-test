@@ -29,7 +29,7 @@ class Post(db.Model):
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30), nullable=False, unique=True)
-    password = db.Column(db.String(12), nullable=False)
+    password = db.Column(db.String(30), nullable=False)
 
 #ユーザー情報の読み込み
 @login_manager.user_loader
